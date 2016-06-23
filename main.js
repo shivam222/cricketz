@@ -49,7 +49,7 @@ app.config(function($routeProvider){
 	.when('/',{templateUrl:'home.html'})
 	.when('/news',{template:'news'})
 	.when('/legends',{templateUrl:'legends.html'})
-	.when('/rank',{template:'news'})
+	.when('/rank',{templateUrl:'rank.html'})
 	.when('/learn',{template:'news'})
 	.when('/search',{template:'news'})
 	.otherwise({redirectTo:'/'});
@@ -67,7 +67,7 @@ app.controller('legend',function($scope,$http){
 	  }
 	  
 });
-
+//slider on home page
  app.controller('crick2',function($scope){
 	$scope.slides = [
             {image: 'images/ball.png', description: 'Image 00'},
@@ -86,31 +86,45 @@ app.controller('legend',function($scope,$http){
 	
 });
 
-/*app.directive('heroes',function(){
+//controller for rank page .
+
+app.controller('ranker',function($scope,$http){
 	
-	function hero($scope,elem,attrs){
-		$scope.changecolor=function($event){
-			
-		};
-	}
-	return{
-		restrict:'E',
-		link:hero,
-		tempalte:'<div ng-click="changecolor($event)"></div>'
-	}
+	 $http.get('jsonplayers.json')//http://localhost:553/artifice_2540/jsonplayers.json
+	 .success(function(response){
+		   $scope.array=response.records; 
+	 });
+	  var check=0;
+      $scope.team1=function(){
+		   check=1;
+	  }	;  
+	   $scope.batsman1=function(){
+		   check=2;
+	  }	; 
+	   $scope.bowler1=function(){
+		   check=3;
+	  }	; 
+	  $scope.myfunc=function(){
+		  if(check==0)
+		  {
+			  return 'name';
+		  }
+		  if(check==1)
+		  {
+			  return 'age';
+		  }
+		  if(check==2)
+		  {
+			  return 'height';
+		  }
+		  else{
+			  return 'number';
+		  }
+	  };
+	  
 });
-	
-	
 
-	
-/*	
-	angular.element(document).ready(function() {
-      angular.bootstrap(document, ['legend']);
-    });
 
-*/
 
-//js --legends list hover
-//var legend=document.getElementsByTagName("li");
-//legend[0].style.color='blue';	
-	
+
+

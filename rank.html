@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>
+</title>
+</head>
+<body>
+<div id="wrapper" style="margin-top:0px" ng-controller="ranker">
+<div class="row">
+<div class="col-md-4">
+<h3 style="color:yellow">This is <strong>test match</strong> ranking. </h3>
+</div>
+<div class="col-md-4">
+<h3 style="color:yellow">This is <strong>one-day</strong> match ranking. </h3>
+</div>
+<div class="col-md-4">
+<h3 style="color:yellow">This is <strong>20-20</strong> match ranking. </h3>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<button class="btn btn-default btn-md btn-danger" value="Team" ng-click="team1()">Team</button> &nbsp&nbsp
+<button class="btn btn-default btn-md" value="Batsman" ng-click="batsman1()"/>Batsman</button>&nbsp&nbsp
+<button class="btn btn-default btn-md" value="Bowler" ng-click="bowler1()"/>Bowler</button><br><br>
+<div class="well well-sm">
+<div ng-repeat="play in array|orderBy:myfunc()" style="color:red">{{play.name}}</div>
+</div>
+</div>
+<div class="col-md-4">
+<button class="btn btn-default btn-md btn-danger" value="Team" ng-click="team2()">Team</button> &nbsp&nbsp
+<button class="btn btn-default btn-md" value="Batsman" ng-click="batsman2()"/>Batsman</button>&nbsp&nbsp
+<button class="btn btn-default btn-md" value="Bowler" ng-click="bowler2()"/>Bowler</button>
+</div>
+<div class="col-md-4">
+<button class="btn btn-default btn-md btn-danger" value="Team" ng-click="team3()">Team</button> &nbsp&nbsp
+<button class="btn btn-default btn-md" value="Batsman" ng-click="batsman3()"/>Batsman</button>&nbsp&nbsp
+<button class="btn btn-default btn-md" value="Bowler" ng-click="bowler3()"/>Bowler</button>
+</div>
+</div>
+</div>
+</body>
+</html>
