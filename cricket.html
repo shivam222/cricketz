@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<title>Cricketz!</title>
+		
+		
+		 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+         <script  src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+		 <script src="main.js" ></script>
+		 <script src="angular-route.min.js"></script>
+        
+		
+
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		
+	</head>
+	<body ng-app="crick" >
+	     
+	    
+	
+		<div id="wrapper" class="container">
+			<div id="header">
+			
+				<div id="logo">
+				
+					<h1><u><a href="#cricketz">CRICKETZ!</a></u></h1>
+					
+				</div>
+				<div id="menu">
+					<ul>
+						<u><li class="first current_page_item"><a href="#legends">Legends</a></li>
+						<li><a href="#news">News</a></li>
+						<li><a href="#rank">Rank</a></li>
+						<li><a href="#learn">Learn</a></li>
+						<li class="last"><a href="#search">Search</a></li></u>
+					</ul>
+					<br class="clearfix" />
+				</div>
+				      
+			</div>
+			<br><br>
+			
+			<div ng-view> </div>
+			
+		
+		<div id="footer">
+			&copy; Untitled | Design by shivam bansal
+		</div>
+		</div>
+	    <script src="js/jquery-1.12.4.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+		
+	</body>
+</html>

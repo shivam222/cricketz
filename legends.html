@@ -1,0 +1,59 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Legends:)</title>
+ 
+</head>
+<body>
+
+<div class="wrapper">
+<h2>SOME LEGENDS CONCLUDED ON THE BASIS OF POLL AND RECORDS. </h2>
+<ul id="names">
+<div   ng-controller="legend">
+<span class="glyphicon glyphicon-search"></span>&nbsp
+<input type="text" placeholder="  legendary search " ng-model="field" style="border:2px solid;border-radius:5px"></input>
+<br><br>
+<div class="row">
+<div class="col-sm-6" ng-repeat="play in array | filter:field">
+<div class="well well-sm">
+<div class="row">
+<div class="col-md-6">
+<!--<img src="play.imageUrl" ></img>-->
+</div>
+<div class="col-md-6" id="plays">
+{{play.name}}
+<br>
+{{play.id}}
+<button type="button" class="btn btn-info btn-sm pull-right" data-toggle="modal" data-target="#modd" ng-click="modal(play)">more info</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal" id="modd" style="width:800px;margin:auto; margin-top:30px;">
+<div class="modal-dialogue">
+<div class="modal-content">
+<div class="modal-header" style="background-color:black;">
+<h4 >{{currentPlayer.name}}</h4>
+</div>
+<div class="modal-body" style="background-color:red;">
+<div class="row">
+<div class="col-xs-8 col-xs-offset-2">
+<img src={{currentPlayer.imageUrl}}/>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+{{currentPlayer.position}}
+</div>
+</div>
+<div class="modal-footer">
+</div>
+<button class="btn btn-default btn-sm" data-dismiss="modal">Hide</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
