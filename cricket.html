@@ -21,10 +21,12 @@
 		
 	</head>
 	<body ng-app="crick" >
-	     
-	    
-	
+	     <?php 
+ require 'log.php';
+ ?>
+
 		<div id="wrapper" class="container">
+
 			<div id="header">
 			
 				<div id="logo">
@@ -42,8 +44,8 @@
 					</ul>
 					<br class="clearfix" />
 				</div>
-				      
-			</div>
+				</div>
+				
 			<br><br>
 			
 			<div ng-view> </div>

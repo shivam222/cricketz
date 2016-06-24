@@ -1,9 +1,11 @@
 <?php
+ob_start();
+session_start();
 $servername = "localhost:3307";
 $username = "root";
 $password = "";
 $db_name="users";
-
+$_SESSION['logged']='no';
 if($connection=mysql_connect($servername,$username,$password))
 {
 if($database=mysql_select_db($db_name,$connection)){
@@ -22,11 +24,13 @@ if(!empty($mail)&&!empty($pass))
 	if($query_row==0)
 	{
 		echo 'wrong password or email.';
+		header('Location:cricket.html#/');
 	}
 	else{
 		$user_id=mysql_result($run,0,'id');
-		echo $user_id; 
-	}
+		$_SESSION['logged']='yes';
+		$_SESSION['user_id']=$user_id;
+		}
 	
 }
 else{

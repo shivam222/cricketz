@@ -56,7 +56,7 @@ app.config(function($routeProvider){
 });
 //controller for legend list
 app.controller('legend',function($scope,$http){
-	
+	 
 	  $http.get('jsonplayers.json')//http://localhost:553/artifice_2540/jsonplayers.json
 	  .success(function(response){
 		   $scope.array=response.records; 
