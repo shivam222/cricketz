@@ -3,91 +3,47 @@
 <title>Home Page:)</title>
  
 </head>
-<div id="sec"></div>
+
 			
 			
     	<div ng-controller="crick2" id="wholeslider">
-			<div class="slidercontainer" >
-			<img   ng-repeat="slide in slides" class="slide" ng-hide="!iscurrentslideindex($index)" ng-src="{{slide.image}}"/>
-		    </div>
+		<div class="slidercontainer" >
+		<img   ng-repeat="slide in slides" class="slide" ng-hide="!iscurrentslideindex($index)" ng-src="{{slide.image}}"/>
+	    </div>
 
-         <nav class="nav">
-         <div class="wrapper">
-         <ul class="dots">
+        <nav class="nav">
+        <div class="wrapper">
+        <ul class="dots">
         <li class="dot" ng-repeat="slide in slides"><a href="" ng-class="{'active':iscurrentslideindex($index)}"  ng-click="setindex($index);">
-        this is just to make dots</a></li>
+        this is just to make dots</a>
+		</li>
         </ul>
-       </div>
-      </nav>
-    </div>
+        </div>
+        </nav>
+        </div>
+		<div class="row">
+		<div class="col-md-5">
+		<div class="well well-sm">		
+		<h4>Sign Up<h2><br>
+		<input type="text" name="signname" placeholder="Your name please.." class="form-control " /><br>
+		<input type="text" name="signmail" placeholder="Your Email id please.." class="form-control" /><br>
+		<input type="password" name="signpass" placeholder="Create your password.." class="form-control" /></br>
+		<button type="submit" class="btn btn-default btn-sm btn-danger pull-right">submit</button>
+		</div>
+		</div>
+		<div class="col-md-5 col-md-offset-2">
+		<div class="well well-sm">
+		<h4>Log In</h4><br>
+		<form action="log.php" method="post">
+		<input type="text" name="logmail" placeholder="Your Email id please.." class="form-control" /><br>
+		<input type="password" name="logpass" placeholder="your password.." class="form-control" /></br>
+		<label><input type="checkbox" class"checkbox" value="" name="logcheck"/>Keep me loged in</label> 
+		<button type="submit" class="btn btn-default btn-sm btn-danger pull-right">submit</button>
+		<br>
+		</form>
+		</div>
+		</div>
+		</div>
 			
-			<div id="page">
-				<div id="content">
-					<div class="box">
-						<h2>Welcome to Cricketz!</h2>
-						<p>
-							This is the place for you if you are a cricket lover.<br><b>Know all the stats here,watch the best moments,<br>see the news,learn the tricks from our experts<b>.
-						</p>
-					</div>
-					<div id="col1" class="box">
-						<h3>Animated News.</h3>
-						<ul class="section-list">
-							<li class="first">
-							<img class="alignleft" src="images/pic2.jpg" width="60" height="60" alt=""/><span></span></li>
-							Get all latest updates in a funny way.
-							</ul>
-					</div>
-					<div id="col2" class="box">
-						
-					</div>
-					<br class="clearfix" />
-				</div>
-				<div id="sidebar2">
-					<div class="box">
-						<h3>Vote</h3>
-						<p>
-							Go in the player's profile and hit the like if you like that player.<br>your like will be counted in our stats column of popularity and fame.
-						</p>
-						<ul class="list">
-							<li class="first"><a href="#">crap crap crap</a></li>
-							<li><a href="#">crap crap crap</a></li>
-							<li><a href="#">crap crap crap</a></li>
-							<li class="last"><a href="#">crap crap crap</a></li>
-						</ul>
-					</div>
-					<div class="box">
-						<h3>blah blah blah</h3>
-						<ul class="list">
-							<li class="first"><a href="#">blah blah blah</a></li>
-							<li><a href="#">blah blah blahs</a></li>
-							<li><a href="#">blah blah blah</a></li>
-							<li><a href="#">blah blah blah</a></li>
-							<li class="last"><a href="#">blah blah blah</a></li>
-						</ul>
-					</div>
-				</div>
-				<div id="sidebar1">
-					<div class="box">
-						<h3>Awesome Site</h3>
-						<p>
-							NOTHING HERE REALLY!
-						</p>
-					</div>
-					<div class="box">
-						<h3>Under construction</h3>
-						<p>
-						</p>
-						<ul class="list">
-							<li class="first"><a href="#">Sachin</a></li>
-							<li><a href="#"></a></li>
-							<li><a href="#"></a></li>
-							<li><a href="#"></a></li>
-							<li><a href="#"></a></li>
-							<li><a href="#"></a></li>
-							<li class="last"><a href="#"></a></li>
-						</ul>
-					</div>
-				</div>
-				<br class="clearfix" />
-			</div>
-			</html>
+		
+</html>

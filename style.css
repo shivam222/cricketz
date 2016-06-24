@@ -110,19 +110,14 @@ ul h4 {
 	height: 100px;
 	top:0px;
 	background-color:#696969;
-	right:-190px;
+	right:-50px;
 	position:fixed;
 	opacity:0.8;
 	z-index:100;
 	
 
 }
-#sec{
-	    position:relative;
-        width:1170px;
-		height:2px;
-		
-}
+
 
 @-webkit-keyframes log{
 	50% {color:red;} 
@@ -168,7 +163,7 @@ ul h4 {
 
 #menu {
 	position: absolute;
-	right: 200px;
+	right: 80px;
 	top: 40px; 
 	font-family: Kreon, sans-serif;
 	height: 20px;
@@ -188,17 +183,17 @@ ul h4 {
 	 animation-name: log2;
      animation-duration: 10s;
 	 animation-iteration-count: 100;
-}
+	 }
 
 #menu ul {
 	padding: 0 20px 0 20px;
 	list-style: none;
-}
+	}
 
 #menu ul li {
 	display: inline;
 	padding: 0 20px 0 20px;
-}
+	}
 
 #page {
 	margin: 0;
