@@ -65,6 +65,21 @@ app.controller('legend',function($scope,$http){
 	  $scope.modal=function(play){
       $scope.currentPlayer=play;
 	  }
+	  //user must be logged in to see.
+	 /* $scope.logg=true;
+	  $http.get('log.php')//http://localhost:553/artifice_2540/jsonplayers.json
+	 .success(function(response){
+		 	  
+
+		   $scope.arr=response.$_SESSION['user_id']; 
+		   if(!($scope.arr))
+	  {
+		  $scope.logg=false;
+	  }
+	  
+	 });*/
+	  //$scope.arr2=$scope.arr2['id'];
+	  
 	  
 });
 //slider on home page

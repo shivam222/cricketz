@@ -5,7 +5,6 @@ $servername = "localhost:3307";
 $username = "root";
 $password = "";
 $db_name="users";
-$_SESSION['logged']='no';
 if($connection=mysql_connect($servername,$username,$password))
 {
 if($database=mysql_select_db($db_name,$connection)){
@@ -30,6 +29,7 @@ if(!empty($mail)&&!empty($pass))
 		$user_id=mysql_result($run,0,'id');
 		$_SESSION['logged']='yes';
 		$_SESSION['user_id']=$user_id;
+		header('Location:cricket.html#/legends');
 		}
 	
 }
