@@ -1,43 +1,3 @@
-//jquery slider.
-
-/*$(document).ready(function()
-{ 
-var width=500;
-var animationspeed=1000;
-var pause=3000;
-
-
-var $slider=$('#slider');
-var $slidecontainer=$slider.find('.slides');
-var $slides=$slidecontainer.find('.slide');	
-
-var interval;
-var count=0;
-function startslider(){
-	interval=setInterval(function(){
-		$slidecontainer.animate({'margin-top':'-='+width},animationspeed,function(){
-		    count++;
-			if(count==9)
-			{
-			$slidecontainer.css('margin-top',0);
-			}});
-	},pause);
-}
-function stopslider(){
-	clearInterval(interval);
-}
-$slider.on('mouseenter',stopslider).on('mouseleave',startslider);
-startslider();
-//legends list
-$("ul li").on('click',function(){
-	$(this).next().css('color','blue');
-	$(this).css('color','red');
-	}
-);
-});*/
-
-
-
 
 
 //angular-	routing
@@ -48,7 +8,16 @@ app.config(function($routeProvider){
 	$routeProvider
 	.when('/',{templateUrl:'home.html'})
 	.when('/news',{template:'news'})
-	.when('/legends',{templateUrl:'legends.html'})
+	.when('/legends',{
+		resolve:{
+			"check":function($location,$rootScope){
+				if(!($rootScope.logged)){
+					$location.path("/");
+				}
+				
+			}
+		},templateUrl:'legends.html'
+	})
 	.when('/rank',{templateUrl:'rank.html'})
 	.when('/learn',{template:'news'})
 	.when('/search',{template:'news'})
@@ -65,20 +34,6 @@ app.controller('legend',function($scope,$http){
 	  $scope.modal=function(play){
       $scope.currentPlayer=play;
 	  }
-	  //user must be logged in to see.
-	 /* $scope.logg=true;
-	  $http.get('log.php')//http://localhost:553/artifice_2540/jsonplayers.json
-	 .success(function(response){
-		 	  
-
-		   $scope.arr=response.$_SESSION['user_id']; 
-		   if(!($scope.arr))
-	  {
-		  $scope.logg=false;
-	  }
-	  
-	 });*/
-	  //$scope.arr2=$scope.arr2['id'];
 	  
 	  
 });
@@ -137,6 +92,33 @@ app.controller('ranker',function($scope,$http){
 		  }
 	  };
 	  
+});
+app.controller('home',function($scope,$location,$rootScope){
+	$scope.form=true;
+	if(!($rootScope.logged))
+	{
+		$scope.form=false;
+	    $scope.msg=true;
+	}
+	
+	$scope.submit=function(){
+		if($scope.name=="admin" && $scope.password=="admin" )
+	   {
+		$rootScope.logged=true;
+		//$location.path('/legends');
+	   }
+	    else{
+			alert("rubbish");
+		}
+	   if($rootScope.logged==true)
+	{
+	$scope.form=true;
+	$scope.msg=false;		
+	}
+		
+		
+	}
+		 
 });
 
 

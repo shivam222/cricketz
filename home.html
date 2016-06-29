@@ -21,7 +21,8 @@
         </div>
         </nav>
 	    </div>
-		<div class="row">
+		<div class="row" ng-controller="home" >
+		<div ng-hide="form">
 		<div class="col-md-5">
 		<div class="well well-sm">		
 		<h4>Sign Up<h2><br>
@@ -34,16 +35,18 @@
 		<div class="col-md-5 col-md-offset-2">
 		<div class="well well-sm">
 		<h4>Log In</h4><br>
-		<form action="log.php" method="post">
-		<input type="text" name="logmail" placeholder="Your Email id please.." class="form-control" /><br>
-		<input type="password" name="logpass" placeholder="your password.." class="form-control" /></br>
+		<!--<form action="" method="post">-->
+		<input type="text" name="logmail" ng-model="name" placeholder="Your Email id please.." class="form-control" /><br>
+		<input type="password" name="logpass" ng-model="password" placeholder="your password.." class="form-control" /></br>
 		<label><input type="checkbox" class"checkbox" value="" name="logcheck"/>Keep me loged in</label> 
-		<button type="submit" class="btn btn-default btn-sm btn-danger pull-right">submit</button>
+		<button type="submit" ng-click="submit()" class="btn btn-default btn-sm btn-danger pull-right">submit</button>
 		<br>
-		</form>
+		<!--</form>-->
 		</div>
 		</div>
+		</div>
+		<div ng-hide="msg">
+		<h2 style="color:white">You are logged in.</h2>
 		</div>
 		
-						
 </html>
