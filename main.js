@@ -93,33 +93,65 @@ app.controller('ranker',function($scope,$http){
 	  };
 	  
 });
-app.controller('home',function($scope,$location,$rootScope){
+app.controller('home',function($scope,$http,$rootScope){
 	$scope.form=true;
 	if(!($rootScope.logged))
 	{
 		$scope.form=false;
 	    $scope.msg=true;
 	}
-	
+	$scope.user={};
 	$scope.submit=function(){
-		if($scope.name=="admin" && $scope.password=="admin" )
-	   {
-		$rootScope.logged=true;
-		//$location.path('/legends');
-	   }
-	    else{
-			alert("rubbish");
-		}
-	   if($rootScope.logged==true)
+	$http({
+    method: 'post',
+    url: 'log.php',
+	data : $.param({
+                name: $scope.user.name,
+				pass: $scope.user.password
+            }),
+    headers: {
+        'Content-Type': "application/x-www-form-urlencoded; "    //charset=utf-8
+              }
+                                     //$.param({ lang: "fr" })
+	 })
+	.success(function(data) {		  
+			  if(data=='yes')
+			  {
+				 $rootScope.logged=true; 
+			  }
+	 });
+	    if($rootScope.logged==true)
 	{
 	$scope.form=true;
 	$scope.msg=false;		
 	}
+	};
+	});
+	
+
+    
+	
+	/*
+		  
+		  $http(req).success(function(data, status, headers, config)
+	{
+		$scope.password=data;
+	});/*.error(function(data, status, headers, config){alert("error"/*+res*)/;*/
+	//};
+	//});*/
+	
+	
+	
+	
+	
+	
+	
+	
+	
 		
-		
-	}
+	
 		 
-});
+
 
 
 
