@@ -16,10 +16,10 @@ $database=mysql_select_db($db_name,$connection);
 		$run=mysql_query($query);
 		$ansi=mysql_fetch_assoc($run);
 		if($hashed==$ansi['password']){
-		echo 'yes';
+		echo true;
 		}
 	    else{
-			echo 'no';
+			echo false;
 		}
 ?>
 		

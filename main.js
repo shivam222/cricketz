@@ -114,11 +114,9 @@ app.controller('home',function($scope,$http,$rootScope){
               }
                                      //$.param({ lang: "fr" })
 	 })
-	.success(function(data) {		  
-			  if(data=='yes')
-			  {
-				 $rootScope.logged=true; 
-			  }
+	.success(function(data) {	
+ 	          $rootScope.logged=data; 
+
 	 });
 	    if($rootScope.logged==true)
 	{
