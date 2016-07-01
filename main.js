@@ -20,7 +20,7 @@ app.config(function($routeProvider){
 	})
 	.when('/rank',{templateUrl:'rank.html'})
 	.when('/learn',{template:'news'})
-	.when('/search',{template:'news'})
+	.when('/global',{templateUrl:'global.html'})
 	.otherwise({redirectTo:'/'});
 });
 //controller for legend list
@@ -126,19 +126,33 @@ app.controller('home',function($scope,$http,$rootScope){
 	};
 	});
 	
-
-    
-	
-	/*
-		  
-		  $http(req).success(function(data, status, headers, config)
-	{
-		$scope.password=data;
-	});/*.error(function(data, status, headers, config){alert("error"/*+res*)/;*/
-	//};
-	//});*/
-	
-	
+app.controller('global',function($scope){
+	 //checkboxes hiding.
+	 $scope.stateChange=function(test)
+	 {
+		  $scope.ones=!($scope.ones);
+		  $scope.twentys=!($scope.twentys);
+	 }
+	 $scope.stateChange2=function(one)
+	 {
+		  $scope.tests=!($scope.tests);
+		  $scope.twentys=!($scope.twentys);
+	 }
+	 $scope.stateChange3=function(twenty)
+	 {
+		  $scope.ones=!($scope.ones);
+		  $scope.tests=!($scope.tests);
+	 }
+	 
+	 //team hiding
+	 $scope.teamHide=function($event){
+		 $scope.team=true;
+		 $scope.target=angular.element($event.target);
+		 $scope.choose='your selected team is'+' '+$scope.target.html();
+	 }
+	  
+	  
+});
 	
 	
 	

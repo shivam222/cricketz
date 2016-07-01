@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Global</title>
+ </head>
+<body>
+<div class="wrapper" ng-controller="global">
+
+<img style="float:right" src="images/cricketz2.png"/>
+<h2 style="position:absolute">Choose your options. </h2>
+
+<br><br><br><br>                                                            
+<div class="row">
+<div class="col-md-3 col-md-offset-1">
+<div class="well well-sm">
+<h4>Pick your format</h4>
+<br>
+<span style="color:red" ng-hide="tests">Test match</span>&nbsp&nbsp
+<div ng-hide="tests"><input type="checkbox" class="checkbox" name="test" ng-model="test" ng-change="stateChange(test)" /></div>
+<br>
+<span style="color:red" ng-hide="ones">One-Day</span>&nbsp&nbsp
+<div ng-hide="ones"><input type="checkbox" class="checkbox"  name="one" ng-model="one" ng-change="stateChange2(one)"/></div>
+<br>
+<span style="color:red" ng-hide="twentys">Twenty-Twenty</span>&nbsp&nbsp
+<div ng-hide="twentys"><input type="checkbox" class="checkbox"  name="twenty" ng-model="twenty" ng-change="stateChange3(twenty)"/></div>
+<br>
+</div>
+</div>
+<div class="col-md-3 col-md-offset-1">
+<div class="well well-sm">
+<h4>Pick your team</h4>
+<h6 style="color:red">click on the team name</h6>
+<ul>
+{{choose}}
+<li ng-hide="team" ng-click="teamHide($event)" style="cursor:default">India</li>
+<li ng-hide="team" ng-click="teamHide($event)" style="cursor:default">England</li>
+<li ng-hide="team" ng-click="teamHide($event)" style="cursor:default">Australia</li>
+<li ng-hide="team" ng-click="teamHide($event)" style="cursor:default">Pakistan</li>
+</ul>
+</div>
+</div>
+<div class="col-md-3 col-md-offset-1">
+<div class="well well-sm">
+<h4>Pick your style</h4>
+<br>
+<span style="color:red" ng-hide="bat">Batting</span>&nbsp&nbsp
+<div ng-hide="bat"><input type="checkbox" class="checkbox" name="batt" ng-model="batt" ng-change="stateChange4(batt)" /></div>
+<br>
+<span style="color:red" ng-hide="bowl">Bowling</span>&nbsp&nbsp
+<div ng-hide="bowl"><input type="checkbox" class="checkbox"  name="bow" ng-model="bow" ng-change="stateChange5(bow)"/></div>
+<br>
+</div>
+<button class="btn btn-default btn-sm btn-danger pull-right" ng-click="submit()">submit</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
