@@ -30,7 +30,8 @@
 <h4>Pick your team</h4>
 <h6 style="color:red">click on the team name</h6>
 <ul>
-{{choose}}
+{{choose}}<br>
+<div ng-click="back2()" style="color:blue;cursor:default">{{back}}</div>
 <li ng-hide="team" ng-click="teamHide($event)" style="cursor:default">India</li>
 <li ng-hide="team" ng-click="teamHide($event)" style="cursor:default">England</li>
 <li ng-hide="team" ng-click="teamHide($event)" style="cursor:default">Australia</li>
@@ -49,7 +50,21 @@
 <div ng-hide="bowl"><input type="checkbox" class="checkbox"  name="bow" ng-model="bow" ng-change="stateChange5(bow)"/></div>
 <br>
 </div>
-<button class="btn btn-default btn-sm btn-danger pull-right" ng-click="submit()">submit</button>
+<button class="btn btn-default btn-sm btn-danger pull-right" ng-click="submit()" data-toggle="modal" data-target="#mod">submit</button>
+</div>
+</div>
+<!--modal-->
+<div class="modal" id="mod">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+
+</div>
+<div class="modal-body">
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-sm btn-warning pull-right" data-dismiss="modal" >Hide</button>
 </div>
 </div>
 </div>

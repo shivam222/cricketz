@@ -128,27 +128,57 @@ app.controller('home',function($scope,$http,$rootScope){
 	
 app.controller('global',function($scope){
 	 //checkboxes hiding.
+	 $scope.teamSelected=0;
 	 $scope.stateChange=function(test)
 	 {
 		  $scope.ones=!($scope.ones);
-		  $scope.twentys=!($scope.twentys);
+		  $scope.twentys=!($scope.twentys); //problem if checked and then unchecked.
+		  $scope.teamSelected=1;
 	 }
 	 $scope.stateChange2=function(one)
 	 {
 		  $scope.tests=!($scope.tests);
 		  $scope.twentys=!($scope.twentys);
+		  $scope.teamSelected=2;
 	 }
 	 $scope.stateChange3=function(twenty)
 	 {
 		  $scope.ones=!($scope.ones);
 		  $scope.tests=!($scope.tests);
+		  $scope.teamSelected=3;
+	 }
+	 //for style
+	 $scope.styleSelected=0;
+	 $scope.stateChange4=function(batt)
+	 {
+		  $scope.bowl=!($scope.bowl);
+		  $scope.styleSelected=1;
+	 }
+	 $scope.stateChange5=function(bow)
+	 {
+		  $scope.bat=!($scope.bat);
+		  $scope.styleSelected=2;
 	 }
 	 
 	 //team hiding
+	 $scope.teamSelected="no";
 	 $scope.teamHide=function($event){
-		 $scope.team=true;
+		 $scope.team=true;                                    //can't retreive back to options.
 		 $scope.target=angular.element($event.target);
 		 $scope.choose='your selected team is'+' '+$scope.target.html();
+		 $scope.back='Back';
+		 $scope.teamSelected=$scope.target.html();
+	 }
+	 //back
+	 $scope.back2=function(){
+		 $scope.team=false;
+		 $scope.choose=" ";
+		 $scope.back=" ";
+    	 $scope.teamSelected="no";
+	 }
+	 
+	 $scope.submit=function(){
+		 
 	 }
 	  
 	  
