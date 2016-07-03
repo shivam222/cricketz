@@ -2,7 +2,7 @@
 
 //angular-	routing
 
-var app=angular.module('crick',['ngRoute']);
+var app=angular.module('crick',['ngRoute','ngCookies']);
 
 app.config(function($routeProvider){
 	$routeProvider
@@ -93,14 +93,23 @@ app.controller('ranker',function($scope,$http){
 	  };
 	  
 });
-app.controller('home',function($scope,$http,$rootScope){
+app.controller('home',function($scope,$http,$rootScope,$cookies){
 	$scope.form=true;
-	if(!($rootScope.logged))
+	var loggedin="cookie";
+	if($cookies.get(loggedin)=='yep'){
+	$rootScope.logged=true;
+	}
+    if(!($rootScope.logged))
 	{
 		$scope.form=false;
 	    $scope.msg=true;
 	}
 	$scope.user={};
+	//cookies
+	var expireDate = new Date();
+    expireDate.setDate(expireDate.getDate() + 1);
+    
+    //submit()
 	$scope.submit=function(){
 	$http({
     method: 'post',
@@ -116,14 +125,18 @@ app.controller('home',function($scope,$http,$rootScope){
 	 })
 	.success(function(data) {	
  	          $rootScope.logged=data; 
+			  // Setting a cookie
+              $cookies.put(loggedin, 'yep', {'expires': expireDate});
 
 	 });
-	    if($rootScope.logged==true)
+	 
+	 };
+		    if($rootScope.logged==true)
 	{
 	$scope.form=true;
 	$scope.msg=false;		
 	}
-	};
+	
 	});
 	
 app.controller('global',function($scope){
