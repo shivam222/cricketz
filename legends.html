@@ -27,7 +27,7 @@
 <div class="col-md-6" id="plays">
 {{play.name}}
 <br>
-{{play.id}}
+{{play.runs}}
 <button type="button" class="btn btn-info btn-sm pull-right" data-toggle="modal" data-target="#modd" ng-click="modal(play)">more info</button>
 </div>
 </div>
@@ -43,12 +43,12 @@
 <div class="modal-body" style="background-color:red;">
 <div class="row">
 <div class="col-xs-8 col-xs-offset-2">
-<img src={{currentPlayer.imageUrl}}/>
+{{currentPlayer.matches}}
 </div>
 </div>
 <div class="row">
 <div class="col-md-6">
-{{currentPlayer.position}}
+{{currentPlayer.wickets}}
 </div>
 </div>
 <div class="modal-footer">

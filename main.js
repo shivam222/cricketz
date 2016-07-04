@@ -26,7 +26,7 @@ app.config(function($routeProvider){
 //controller for legend list
 app.controller('legend',function($scope,$http){
 	 
-	  $http.get('jsonplayers.json')//http://localhost:553/artifice_2540/jsonplayers.json
+	  $http.get('aus20.json')//http://localhost:553/artifice_2540/jsonplayers.json
 	  .success(function(response){
 		   $scope.array=response.records; 
 	  });
@@ -60,7 +60,7 @@ app.controller('legend',function($scope,$http){
 
 app.controller('ranker',function($scope,$http){
 	
-	 $http.get('jsonplayers.json')//http://localhost:553/artifice_2540/jsonplayers.json
+	 $http.get('aus20.json')//http://localhost:553/artifice_2540/jsonplayers.json
 	 .success(function(response){
 		   $scope.array=response.records; 
 	 });
@@ -81,14 +81,14 @@ app.controller('ranker',function($scope,$http){
 		  }
 		  if(check==1)
 		  {
-			  return 'age';
+			  return 'runs';
 		  }
 		  if(check==2)
 		  {
-			  return 'height';
+			  return 'wickets';
 		  }
 		  else{
-			  return 'number';
+			  return 'matches';
 		  }
 	  };
 	  
