@@ -139,26 +139,26 @@ app.controller('home',function($scope,$http,$rootScope,$cookies){
 	
 	});
 	
-app.controller('global',function($scope){
+app.controller('global',function($scope,$http){
 	 //checkboxes hiding.
-	 $scope.teamSelected=0;
+	 $scope.formatSelected=0;
 	 $scope.stateChange=function(test)
 	 {
 		  $scope.ones=!($scope.ones);
 		  $scope.twentys=!($scope.twentys); //problem if checked and then unchecked.
-		  $scope.teamSelected=1;
+		  $scope.formatSelected=1;
 	 }
 	 $scope.stateChange2=function(one)
 	 {
 		  $scope.tests=!($scope.tests);
 		  $scope.twentys=!($scope.twentys);
-		  $scope.teamSelected=2;
+		  $scope.formatSelected=2;
 	 }
 	 $scope.stateChange3=function(twenty)
 	 {
 		  $scope.ones=!($scope.ones);
 		  $scope.tests=!($scope.tests);
-		  $scope.teamSelected=3;
+		  $scope.formatSelected=3;
 	 }
 	 //for style
 	 $scope.styleSelected=0;
@@ -191,6 +191,14 @@ app.controller('global',function($scope){
 	 }
 	 
 	 $scope.submit=function(){
+		 if($scope.formatSelected==3 &&$scope.styleSelected==1 &&$scope.teamSelected=='Australia')
+		 {
+			 $http.get('aus20.json')
+			 .success(function(response)
+			 {
+				 $scope.array=response.records;
+			 });
+		 }
 		 
 	 }
 	  

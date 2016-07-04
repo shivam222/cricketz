@@ -3,13 +3,13 @@
 <title>Global</title>
  </head>
 <body>
-<div class="wrapper" ng-controller="global">
+<div class="wrapper"  ng-controller="global" id="grassimg">
 
 <img style="float:right" src="images/cricketz2.png"/>
 <h2 style="position:absolute">Choose your options. </h2>
 
 <br><br><br><br>                                                            
-<div class="row">
+<div class="row" >
 <div class="col-md-3 col-md-offset-1">
 <div class="well well-sm">
 <h4>Pick your format</h4>
@@ -60,8 +60,8 @@
 <div class="modal-header">
 
 </div>
-<div class="modal-body">
-
+<div class="modal-body" ng-repeat="play in array|orderBy:'name'">
+{{play.name}}
 </div>
 <div class="modal-footer">
 <button class="btn btn-sm btn-warning pull-right" data-dismiss="modal" >Hide</button>
