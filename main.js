@@ -136,6 +136,9 @@ app.controller('home',function($scope,$http,$rootScope,$cookies){
 	$scope.form=true;
 	$scope.msg=false;		
 	}
+	$scope.logout=function(){
+		$cookies.remove(loggedin)
+	}
 	
 	});
 	
