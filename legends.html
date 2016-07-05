@@ -8,15 +8,18 @@
 
 <div class="wrapper">
 
+
+<div   ng-controller="legend" >
+<div>
 <h2 style="position:absolute">SOME LEGENDS CONCLUDED ON THE BASIS OF POLL AND RECORDS. </h2>
 
 <img style="float:right;margin-bottom:10px" src="images/cricketz2.png"/>
-<ul id="names">
-<div   ng-controller="legend" >
 <br><br>
 <span class="glyphicon glyphicon-search"></span>&nbsp
 <input type="text" placeholder="  legendary search " ng-model="field" style="border:2px solid;border-radius:5px"></input>
-<br><br>
+<br>
+</div>
+<br>
 <div class="row">
 <div class="col-sm-6" ng-repeat="play in array | filter:field">
 <div class="well well-sm">

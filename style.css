@@ -46,7 +46,7 @@ h2 {
 }
 
 #page h4,h2,h3{
-	color: #E3E3E3;
+	/*color: #E3E3E3;*/
 	font-family: Kreon, sans-serif;
 	margin-bottom: 1.25em;
 }
@@ -84,9 +84,9 @@ ul h4 {
 	margin: 0 0 25px 0;
 	overflow: hidden;
 }
-.box h2,h3{
+/*.box h2,h3{
 	color:green;
-}
+}*/
 
 #content {
 	width: 420px;
@@ -116,6 +116,9 @@ ul h4 {
 	z-index:100;
 	
 
+}
+#header:hover{
+	background-color:#808080;
 }
 
 
@@ -378,3 +381,17 @@ ul h4 {
 #grassimg{
 	background-image:url("images/grass.jpg");
 }
+#home #homeHide{
+	
+	margin: 0 0 0 15px;
+}
+#home{
+	background-color:#48D1CC;
+}
+#home #homeHide #firstHalf{
+	background-color:red;
+}
+#home:hover{
+	background-color:#40E0D0;
+}
+

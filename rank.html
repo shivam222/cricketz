@@ -5,24 +5,26 @@
 </head>
 <body>
 <div id="wrapper" style="margin-top:0px" ng-controller="ranker">
-<div class="row">
+<div class="row" style="background-color:#F5F5F5">
 <div class="col-md-4">
-<h3 style="color:yellow">This is <strong>test match</strong> ranking. </h3>
-</div>
-<div class="col-md-4">
-<h3 style="color:yellow">This is <strong>one-day</strong> match ranking. </h3>
+<h3 style="color:#FF7F50">This is <strong>test match</strong> ranking. </h3>
 </div>
 <div class="col-md-4">
-<h3 style="color:yellow">This is <strong>20-20</strong> match ranking. </h3>
+<h3 style="color:#FF7F50">This is <strong>one-day</strong> match ranking. </h3>
+</div>
+<div class="col-md-4">
+<h3 style="color:#FF7F50">This is <strong>20-20</strong> match ranking. </h3>
 </div>
 </div>
+<hr>
+<br>
 <div class="row">
 <div class="col-md-4">
 <button class="btn btn-default btn-md btn-danger" value="Team" ng-click="team1()">Team</button> &nbsp&nbsp
 <button class="btn btn-default btn-md" value="Batsman" ng-click="batsman1()"/>Batsman</button>&nbsp&nbsp
 <button class="btn btn-default btn-md" value="Bowler" ng-click="bowler1()"/>Bowler</button><br><br>
-<div class="well well-sm">
-<div ng-repeat="play in array|orderBy:myfunc()" style="color:red">{{play.name}}</div>
+<div class="well well-sm" style="color:red">
+<div ng-repeat="play in array|orderBy:myfunc()" style="background-color:#F5F5F5"">{{play.name}}</div>
 </div>
 </div>
 <div class="col-md-4">

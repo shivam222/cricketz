@@ -21,8 +21,11 @@
         </div>
         </nav>
 	    </div>
-		<br><br><br>
-		<div class="row" ng-controller="home" >
+		<br>
+		<hr>
+		<br>
+		<div id="home" >
+		<div class="row" ng-controller="home">
 		<div ng-hide="form">
 		<div class="col-md-5">
 		<div class="well well-sm">		
@@ -53,11 +56,25 @@
 		</div>
 		</div>
 		</div>
-		<div ng-hide="msg">
+		<div ng-hide="msg" id="homeHide" class="row">
+		<div class="col-md-6" id="firstHalf">
 		<h2 style="color:white">You are logged in.</h2>
-	   <video width="320" height="240" controls>
+	   <video width="320" height="240" controls autoplay >
        <source src="logo.mp4" type="video/mp4">
        </video>
-		</div>
+	   </div>
+	   <div class="col-md-6" id="secondHalf" style="color:white">
+	   <h3>About:</h3>
+	   <ul>
+	   <li>Go to legends to vote for your favorite player.</li>
+	   <li>See the ramking in Ranks page.</li>
+	   <li>Go in global to see all the players of some team.</li>
+	   <li>News section contains all the latest and sensible news.</li>
+	   </ul>
+	   </div>
+	   </div>
+	   </div>
+	   </div>
+	   <hr>
 		
 </html>
