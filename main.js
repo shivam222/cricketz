@@ -121,23 +121,32 @@ app.controller('home',function($scope,$http,$rootScope,$cookies){
     headers: {
         'Content-Type': "application/x-www-form-urlencoded; "    //charset=utf-8
               }
-                                     //$.param({ lang: "fr" })
+                                    
 	 })
 	.success(function(data) {	
- 	          $rootScope.logged=data; 
-			  // Setting a cookie
-              $cookies.put(loggedin, 'yep', {'expires': expireDate});
+ 	         $rootScope.logged=data;
+  if($rootScope.logged==true)
+	{
+		
+	    $scope.form=true;
+	    $scope.msg=false;
+        $cookies.put(loggedin, 'yep', {'expires': expireDate});	
+	}
+	else{
+		$rootScope.logged=false;
+	}
+             
 
 	 });
 	 
+	 
 	 };
-		    if($rootScope.logged==true)
-	{
-	$scope.form=true;
-	$scope.msg=false;		
-	}
-	$scope.logout=function(){
-		$cookies.remove(loggedin)
+		    
+	    $scope.logout=function(){
+		$cookies.remove(loggedin);
+		$rootScope.logged=false;
+		$scope.form=false;
+		$scope.msg=true;
 	}
 	
 	});

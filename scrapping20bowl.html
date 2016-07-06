@@ -9,7 +9,7 @@ scrapping!
 include ('simple_html_dom.php');
 
  //Create DOM from URL or file
-$html = file_get_html('http://stats.espncricinfo.com/ci/engine/records/averages/bowling.html?class=3;id=2;type=team');
+$html = file_get_html('http://stats.espncricinfo.com/ci/engine/records/averages/bowling.html?class=3;id=30;type=team');
 
 // Find all links 
 $number=0;
@@ -57,7 +57,7 @@ foreach($html->find('td') as $element)
 	      echo '"4" :';
 	  }
 	  else if(($number-13)%16==0||$number==13){
-	      echo '"6" :';
+	      echo '"5" :';
 	  }
 	  else if(($number-14)%16==0||$number==14){
 	      echo '"ct" :';
