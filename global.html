@@ -3,7 +3,7 @@
 <title>Global</title>
  </head>
 <body>
-<div class="wrapper"  ng-controller="global" id="grassimg">
+<div class="wrapper"  ng-controller="global" id="woodimg">
 
 <img style="float:right" src="images/cricketz2.png"/>
 <h2 style="position:absolute">Choose your options. </h2>
@@ -30,11 +30,11 @@
 <h4>Pick your team</h4>
 <h6 style="color:red">click on the team name</h6>
 <ul>
-{{choose}}<br>
+{{choose}}
 <div ng-click="back2()" style="color:blue;cursor:default">{{back}}</div>
-<li ng-hide="team" ng-click="teamHide($event)" style="cursor:default">India</li>
-<li ng-hide="team" ng-click="teamHide($event)" style="cursor:default">England</li>
-<li ng-hide="team" ng-click="teamHide($event)" style="cursor:default">Australia</li>
+<li ng-hide="team" ng-click="teamHide($event)" style="cursor:default">India</li><br>
+<li ng-hide="team" ng-click="teamHide($event)" style="cursor:default">England</li><br>
+<li ng-hide="team" ng-click="teamHide($event)" style="cursor:default">Australia</li><br>
 <li ng-hide="team" ng-click="teamHide($event)" style="cursor:default">Pakistan</li>
 </ul>
 </div>
@@ -58,10 +58,15 @@
 <div class="modal-dialog">
 <div class="modal-content">
 <div class="modal-header">
-
+<div style="color:black">Name  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  Runs</div>
 </div>
-<div class="modal-body" ng-repeat="play in array|orderBy:'name'">
-{{play.name}}
+<div class="modal-body" id="globalModal">
+<table>
+<tr ng-repeat="play in array|orderBy:'name'">
+<td>{{play.name}}</td>
+<td>{{play.runs}}</td>
+</tr>
+</table>
 </div>
 <div class="modal-footer">
 <button class="btn btn-sm btn-warning pull-right" data-dismiss="modal" >Hide</button>

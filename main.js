@@ -60,7 +60,7 @@ app.controller('legend',function($scope,$http){
 
 app.controller('ranker',function($scope,$http){
 	
-	 $http.get('aus20.json')//http://localhost:553/artifice_2540/jsonplayers.json
+	 $http.get('aus20bowl.json')//http://localhost:553/artifice_2540/jsonplayers.json
 	 .success(function(response){
 		   $scope.array=response.records; 
 	 });
@@ -203,9 +203,9 @@ app.controller('global',function($scope,$http){
 	 }
 	 
 	 $scope.submit=function(){
-		 if($scope.formatSelected==3 &&$scope.styleSelected==1 &&$scope.teamSelected=='Australia')
+		 if($scope.formatSelected==3 &&$scope.styleSelected==2 &&$scope.teamSelected=='Australia')
 		 {
-			 $http.get('aus20.json')
+			 $http.get('aus20bowl.json')
 			 .success(function(response)
 			 {
 				 $scope.array=response.records;

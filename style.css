@@ -10,6 +10,10 @@ body {
 	background: #040606 url(images/img01.gif) repeat-x top left;
 	line-height: 2em;
 	font-size: 12pt;
+	-moz-transform: scale(0.9, 0.9); /* Moz-browsers */
+     -moz-transform: scale(0.9, 0.9); /* Moz-browsers */
+    zoom: 0.9; /* Other non-webkit browsers */
+    zoom: 90%;
 }
 
 body,input {
@@ -378,8 +382,8 @@ ul h4 {
 #plays{
 	color:black;
 }
-#grassimg{
-	background-image:url("images/grass.jpg");
+#woodimg{
+	background-image:url("images/wood.jpg");
 }
 #home #homeHide{
 	
@@ -394,4 +398,10 @@ ul h4 {
 #home:hover{
 	background-color:#40E0D0;
 }
-
+#globalModal{
+	background-image:url("images/global.jpg") ;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
