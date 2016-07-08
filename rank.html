@@ -16,6 +16,7 @@
 <h3 style="color:#FF7F50">This is <strong>20-20</strong> match ranking. </h3>
 </div>
 </div>
+<div id="globalModal">
 <hr>
 <br>
 <div class="row">
@@ -23,19 +24,59 @@
 <button class="btn btn-default btn-md btn-danger" value="Team" ng-click="team1()">Team</button> &nbsp&nbsp
 <button class="btn btn-default btn-md" value="Batsman" ng-click="batsman1()"/>Batsman</button>&nbsp&nbsp
 <button class="btn btn-default btn-md" value="Bowler" ng-click="bowler1()"/>Bowler</button><br><br>
-<div class="well well-sm" style="color:red">
-<div ng-repeat="play in array|orderBy:myfunc()" style="background-color:#F5F5F5"">{{play.name}}</div>
+<div class="well well-sm" style="width:200px" >
+<div style="color:black">
+<span>Rank</span>&nbsp&nbsp&nbsp&nbsp
+<span>Name</span>&nbsp&nbsp&nbsp&nbsp
+<span>Rating</span>
+</div>
+<table  style="width:180px">
+<tr ng-repeat="play in array" style="color:red" id="woodimg" >
+<td>{{play.rank}}</td>
+<td>{{play.name}}</td>
+<td style="float:right">{{play.rating}}</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="col-md-4">
 <button class="btn btn-default btn-md btn-danger" value="Team" ng-click="team2()">Team</button> &nbsp&nbsp
 <button class="btn btn-default btn-md" value="Batsman" ng-click="batsman2()"/>Batsman</button>&nbsp&nbsp
-<button class="btn btn-default btn-md" value="Bowler" ng-click="bowler2()"/>Bowler</button>
+<button class="btn btn-default btn-md" value="Bowler" ng-click="bowler2()"/>Bowler</button><br><br>
+<div class="well well-sm" style="width:200px" >
+<div style="color:black">
+<span>Rank</span>&nbsp&nbsp&nbsp&nbsp
+<span>Name</span>&nbsp&nbsp&nbsp&nbsp
+<span>Rating</span>
+</div>
+<table  style="width:180px">
+<tr ng-repeat="play2 in array2" style="color:red" id="woodimg" >
+<td>{{play2.rank}}</td>
+<td>{{play2.name}}</td>
+<td style="float:right">{{play2.rating}}</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="col-md-4">
 <button class="btn btn-default btn-md btn-danger" value="Team" ng-click="team3()">Team</button> &nbsp&nbsp
 <button class="btn btn-default btn-md" value="Batsman" ng-click="batsman3()"/>Batsman</button>&nbsp&nbsp
-<button class="btn btn-default btn-md" value="Bowler" ng-click="bowler3()"/>Bowler</button>
+<button class="btn btn-default btn-md" value="Bowler" ng-click="bowler3()"/>Bowler</button><br><br>
+<div class="well well-sm" style="width:200px" >
+<div style="color:black">
+<span>Rank</span>&nbsp&nbsp&nbsp&nbsp
+<span>Name</span>&nbsp&nbsp&nbsp&nbsp
+<span>Rating</span>
+</div>
+<table  style="width:180px">
+<tr ng-repeat="play3 in array3" style="color:red" id="woodimg" >
+<td>{{play3.rank}}</td>
+<td>{{play3.name}}</td>
+<td style="float:right">{{play3.rating}}</td>
+</tr>
+</table>
+</div>
+</div>
 </div>
 </div>
 </div>

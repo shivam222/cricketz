@@ -60,21 +60,76 @@ app.controller('legend',function($scope,$http){
 
 app.controller('ranker',function($scope,$http){
 	
-	 $http.get('aus20bowl.json')//http://localhost:553/artifice_2540/jsonplayers.json
-	 .success(function(response){
-		   $scope.array=response.records; 
-	 });
-	  var check=0;
+	 $http.get('ranker/teamtestrank.json')
+		   .success(function(response){
+		   $scope.array=response.records;
+		   });
+	$http.get('ranker/teamonerank.json')
+		   .success(function(response){
+		   $scope.array2=response.records;
+		   });
+	$http.get('ranker/team20rank.json')
+		   .success(function(response){
+		   $scope.array3=response.records;
+		   });
+		   //3 functions
       $scope.team1=function(){
-		   check=1;
-	  }	;  
+		   $http.get('ranker/teamtestrank.json')
+		   .success(function(response){
+		   $scope.array=response.records;
+	  });
+	  };  
 	   $scope.batsman1=function(){
-		   check=2;
+		   $http.get('ranker/battestrank.json')
+		   .success(function(response){
+		   $scope.array=response.records;
+	  });  
 	  }	; 
 	   $scope.bowler1=function(){
-		   check=3;
+		    $http.get('ranker/testbowlrank.json')
+		   .success(function(response){
+		   $scope.array=response.records;
+	  }); 
 	  }	; 
-	  $scope.myfunc=function(){
+	  	   //3 functions
+      $scope.team2=function(){
+		   $http.get('ranker/teamonerank.json')
+		   .success(function(response){
+		   $scope.array2=response.records;
+	  });
+	  };  
+	   $scope.batsman2=function(){
+		   $http.get('ranker/odibatrank.json')
+		   .success(function(response){
+		   $scope.array2=response.records;
+	  });  
+	  }	; 
+	   $scope.bowler2=function(){
+		    $http.get('ranker/odibowlrank.json')
+		   .success(function(response){
+		   $scope.array2=response.records;
+	  }); 
+	  }	; 
+	  	   //3 functions
+     $scope.team3=function(){
+		   $http.get('ranker/team20rank.json')
+		   .success(function(response){
+		   $scope.array3=response.records;
+	  });
+	  };  
+	   $scope.batsman3=function(){
+		   $http.get('ranker/20batrank.json')
+		   .success(function(response){
+		   $scope.array3=response.records;
+	  });  
+	  }	; 
+	   $scope.bowler3=function(){
+		    $http.get('ranker/20bowlrank.json')
+		   .success(function(response){
+		   $scope.array3=response.records;
+	  }); 
+	  }	; 
+	 /* $scope.myfunc=function(){
 		  if(check==0)
 		  {
 			  return 'name';
@@ -90,7 +145,7 @@ app.controller('ranker',function($scope,$http){
 		  else{
 			  return 'matches';
 		  }
-	  };
+	  };*/
 	  
 });
 app.controller('home',function($scope,$http,$rootScope,$cookies){
@@ -206,6 +261,13 @@ app.controller('global',function($scope,$http){
 		 if($scope.formatSelected==3 &&$scope.styleSelected==2 &&$scope.teamSelected=='Australia')
 		 {
 			 $http.get('aus20bowl.json')
+			 .success(function(response)
+			 {
+				 $scope.array=response.records;
+			 });
+		 }
+		 else if($scope.formatSelected==3 &&$scope.styleSelected==2 &&$scope.teamSelected=='England'){
+			 $http.get('eng20bowl.json')
 			 .success(function(response)
 			 {
 				 $scope.array=response.records;
