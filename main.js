@@ -12,6 +12,7 @@ app.config(function($routeProvider){
 		resolve:{
 			"check":function($location,$rootScope){
 				if(!($rootScope.logged)){
+					
 					$location.path("/");
 				}
 				
@@ -26,7 +27,7 @@ app.config(function($routeProvider){
 //controller for legend list
 app.controller('legend',function($scope,$http){
 	 
-	  $http.get('aus20.json')//http://localhost:553/artifice_2540/jsonplayers.json
+	  $http.get('legend/legends.json')//http://localhost:553/artifice_2540/jsonplayers.json
 	  .success(function(response){
 		   $scope.array=response.records; 
 	  });
@@ -260,14 +261,14 @@ app.controller('global',function($scope,$http){
 	 $scope.submit=function(){
 		 if($scope.formatSelected==3 &&$scope.styleSelected==2 &&$scope.teamSelected=='Australia')
 		 {
-			 $http.get('aus20bowl.json')
+			 $http.get('players/aus20bowl.json')
 			 .success(function(response)
 			 {
 				 $scope.array=response.records;
 			 });
 		 }
 		 else if($scope.formatSelected==3 &&$scope.styleSelected==2 &&$scope.teamSelected=='England'){
-			 $http.get('eng20bowl.json')
+			 $http.get('players/eng20bowl.json')
 			 .success(function(response)
 			 {
 				 $scope.array=response.records;

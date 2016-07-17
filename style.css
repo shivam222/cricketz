@@ -175,6 +175,7 @@ ul h4 {
 	font-family: Kreon, sans-serif;
 	height: 20px;
 	line-height: 10px;
+	z-index:100;
 	
 }
 

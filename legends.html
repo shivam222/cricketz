@@ -22,15 +22,16 @@
 <br>
 <div class="row">
 <div class="col-sm-6" ng-repeat="play in array | filter:field">
-<div class="well well-sm">
+<div class="well well-sm" style="width:390px" id="woodimg">
 <div class="row">
 <div class="col-md-6">
-<!--<img src="play.imageUrl" ></img>-->
+<img src="{{play.url}}" ></img>
 </div>
-<div class="col-md-6" id="plays">
-{{play.name}}
-<br>
-{{play.runs}}
+<div class="col-md-6" id="plays" >
+<h4>{{play.name}}</h4>
+<h4>{{play.span}}</h4>
+<h4>{{play.birth}}</h4>
+<br><br><br>
 <button type="button" class="btn btn-info btn-sm pull-right" data-toggle="modal" data-target="#modd" ng-click="modal(play)">more info</button>
 </div>
 </div>
@@ -46,12 +47,12 @@
 <div class="modal-body" style="background-color:red;">
 <div class="row">
 <div class="col-xs-8 col-xs-offset-2">
-{{currentPlayer.matches}}
+
 </div>
 </div>
 <div class="row">
 <div class="col-md-6">
-{{currentPlayer.wickets}}
+
 </div>
 </div>
 <div class="modal-footer">

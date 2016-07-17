@@ -49,6 +49,12 @@
 <span style="color:red" ng-hide="bowl">Bowling</span>&nbsp&nbsp
 <div ng-hide="bowl"><input type="checkbox" class="checkbox"  name="bow" ng-model="bow" ng-change="stateChange5(bow)"/></div>
 <br>
+<div ng-show="batting">
+<span style="color:red" ng-show="batting1">Most wickets</span>&nbsp&nbsp
+<div ng-show="batting1"><input type="checkbox" class="checkbox"  name="wck" ng-model="wck" ng-change="stateChange5(bow)"/></div>
+<span style="color:red" ng-show="batting2">Best economy</span>&nbsp&nbsp
+<div ng-show="batting2"><input type="checkbox" class="checkbox"  name="bow" ng-model="bow" ng-change="stateChange5(bow)"/></div>
+</div>
 </div>
 <button class="btn btn-default btn-sm btn-danger pull-right" ng-click="submit()" data-toggle="modal" data-target="#mod">submit</button>
 </div>
@@ -62,7 +68,7 @@
 </div>
 <div class="modal-body" id="globalModal">
 <table>
-<tr ng-repeat="play in array|orderBy:'name'">
+<tr ng-repeat="play in array|orderBy:'wickets'">
 <td>{{play.name}}</td>
 <td>{{play.runs}}</td>
 </tr>
