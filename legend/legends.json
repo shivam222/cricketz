@@ -2,6 +2,14 @@
 {"name" :"sachin",
 "url":"images/legend1.png",
 "span":"1989-2013",
-"birth":"24 April 1973"
+"birth":"24 April 1973",
+"flag":"images/iflag.png",
+"truns":"15,921",
+"oruns":"18,426",
+"twruns":"10",
+"tmatch":"200",
+"omatch":"463",
+"twmatch":"1",
+"":""
 }
 ]}
