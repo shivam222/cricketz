@@ -42,19 +42,41 @@
 <div class="modal-dialogue">
 <div class="modal-content">
 <div class="modal-header" style="background-color:black;">
-<h4 >{{currentPlayer.name}}</h4>
+<h4 style="width:50px;float:left" >{{currentPlayer.name}}</h4>
+<img src="{{currentPlayer.flag}}" style="float:right;width:50px"></img>
 </div>
-<div class="modal-body" style="background-color:red;">
-<div class="row">
-<div class="col-xs-8 col-xs-offset-2">
+<div class="modal-body" style="background-color:red">
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th> </th>
+        <th>Matches</th>
+        <th>Runs</th>
+	    <th>Wickets</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Test</td>
+        <td>{{currentPlayer.tmatch}}</td>
+        <td>{{currentPlayer.truns}}</td>
+        <td>{{currentPlayer.twickets}}</td>
+      </tr>
+      <tr>
+        <td>One-Day</td>
+        <td>{{currentPlayer.omatch}}</td>
+        <td>{{currentPlayer.oruns}}</td>
+		<td>{{currentPlayer.owickets}}</td>
+      </tr>
+      <tr>
+        <td>Twenty-Twenty</td>
+        <td>{{currentPlayer.twmatch}}</td>
+        <td>{{currentPlayer.twruns}}</td>
+		<td>{{currentPlayer.twwickets}}</td>
+      </tr>
+    </tbody>
+  </table>
 
-</div>
-</div>
-<div class="row">
-<div class="col-md-6">
-
-</div>
-</div>
 <div class="modal-footer">
 </div>
 <button class="btn btn-default btn-sm" data-dismiss="modal">Hide</button>
@@ -62,6 +84,7 @@
 </div>
 </div>
 </div>
+<hr>
 </div>
 
 
