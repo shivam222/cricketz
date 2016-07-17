@@ -68,7 +68,7 @@
 </div>
 <div class="modal-body" id="globalModal">
 <table>
-<tr ng-repeat="play in array|orderBy:'wickets'">
+<tr ng-repeat="play in array|orderBy:'-runs'">
 <td>{{play.name}}</td>
 <td>{{play.runs}}</td>
 </tr>

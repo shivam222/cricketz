@@ -264,14 +264,22 @@ app.controller('global',function($scope,$http){
 			 $http.get('players/aus20bowl.json')
 			 .success(function(response)
 			 {
-				 $scope.array=response.records;
+				 $scope.array2=response.records;
+				 angular.forEach($scope.array2,function(value,key){
+				 	 value.runs=parseInt(value.runs,10);
+				 });
+				 $scope.array=$scope.array2; 
 			 });
 		 }
 		 else if($scope.formatSelected==3 &&$scope.styleSelected==2 &&$scope.teamSelected=='England'){
 			 $http.get('players/eng20bowl.json')
 			 .success(function(response)
 			 {
-				 $scope.array=response.records;
+				 $scope.array2=response.records;
+				 angular.forEach($scope.array2,function(value,key){
+				 	 value.runs=parseInt(value.runs,10);
+				 });
+				 $scope.array=$scope.array2;
 			 });
 		 }
 		 
