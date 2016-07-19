@@ -2,7 +2,7 @@
 
 //angular-	routing
 
-var app=angular.module('crick',['ngRoute','ngCookies']);
+var app=angular.module('crick',['ngRoute','ngCookies','ngAnimate']);
 
 app.config(function($routeProvider){
 	$routeProvider
