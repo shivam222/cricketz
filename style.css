@@ -266,7 +266,7 @@ ul h4 {
 	height: 500px;
 	width: 1200px;
 	overflow:hidden;
-	 position: relative;
+	 position:relative;
     background: #e6e6e6;
     margin-top: -10px;
 	border:10px solid yellow;
@@ -323,10 +323,10 @@ ul h4 {
 .nav {
     text-align: center;
     display: block;
-    position: relative;
-    z-index: 1002;
+    position:relative;
+    z-index: 100;
     left: 0;
-    bottom: -4px;
+    bottom: 80px;
     right: 0;
     height: 48px;
 }
@@ -335,7 +335,7 @@ ul h4 {
 .nav .wrapper {
     margin: 0 auto;  /*centre allign*/
     width: 100%;
-    padding: 1em 0 .8em;
+    /*padding: 1em 0 .8em;*/
 }
 
 .nav ul {
@@ -350,11 +350,11 @@ ul h4 {
 
 .dots .dot {
     position: relative;
-    margin: 0 8px;
+    margin: 0 40px;
     width: 12px;
     height: 12px;
 }
-
+/*
 .dots .dot a {
     position: absolute;
     top: -20px;
@@ -379,7 +379,7 @@ ul h4 {
 .dots .dot a.active {
     border-color:#FFF;
     background-color: transparent;
-}
+}*/
 #plays{
 	color:black;
 }
