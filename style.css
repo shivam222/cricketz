@@ -375,11 +375,10 @@ ul h4 {
     border-radius: 40%;
    
 }
-
+*/
 .dots .dot a.active {
-    border-color:#FFF;
-    background-color: transparent;
-}*/
+    opacity:.4 ;
+}
 #plays{
 	color:black;
 }
@@ -408,7 +407,20 @@ ul h4 {
 }
 .animate.ng-enter {
   transition:.5s linear all;
-  opacity:0;
+  opacity:.5;
+}
+.slide{
+  transition: all linear 0.5s;
+  line-height: 20px;
+  opacity: 1;
+  
+  background: white;
+}
+
+.slide.ng-hide {
+  line-height: 0;
+  opacity: 0;
+  padding: 0 10px;
 }
 
 /* The finishing CSS styles for the enter animation */
