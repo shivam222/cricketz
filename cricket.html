@@ -23,35 +23,27 @@
 		
 	</head>
 	<body ng-app="crick" >
-	     
-	     <div id="wrapper" class="container">
-
-			<div id="header">
+	<nav  class="navbar navbar-inverse navbar-fixed-top">
 			
-				<div id="logo">
-				
-					<h1><u><a  href="#cricketz">CRICKETZ!</a></u></h1>
-					
+			  <div class="container-fluid">
+				<div  class="navbar-header" >
+				<a class="navbar-brand" href="#cricketz" style="font-size:30px">CRICKETZ!</a>
 				</div>
-				<div id="menu">
-					<ul>
-						<u><li class="first current_page_item"><a href="#legends">Legends</a></li>
+				
+					<ul class="nav navbar-nav" style="float:right;font-size:20px">
+						<li><a href="#legends" class="activate">Legends</a></li>
 						<li><a href="#news">News</a></li>
 						<li><a href="#rank">Rank</a></li>
 						<li><a href="#learn">Learn</a></li>
-						<li class="last"><a href="#global">Global</a></li></u>
+						<li class="last"><a href="#global">Global</a></li>
 					</ul>
-					<br class="clearfix" />
-				</div>
-				</div>
-				
-				
-			<br><br>
-			
-			<div ng-view> </div>
-			
-		
-		<div id="footer">
+			  </div>
+	</nav>
+	     
+	     <div id="wrapper" class="container">
+		 <br><br>
+		<div ng-view> </div>
+	    <div id="footer">
 			&copy; Untitled | Design by shivam bansal
 		</div>
 		</div>
