@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>
+News
+</title>
+</head>
+<body>
+<div class="wrapper"  ng-controller="news">
+<div class="row">
+<div class="col-md-6" ng-repeat="scores in array">
+<div class="well well-sm col-md-4">
+<b>score:</b>{{scores}}<br>
+<button class="btn btn-sm btn-danger" ng-click="update()">update</button>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
