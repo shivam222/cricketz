@@ -20,7 +20,7 @@ app.config(function($routeProvider){
 		},templateUrl:'legends.html'
 	})
 	.when('/rank',{templateUrl:'rank.html'})
-	.when('/learn',{template:'news'})
+	.when('/learn',{templateUrl:'news.html'})
 	.when('/global',{templateUrl:'global.html'})
 	.otherwise({redirectTo:'/'});
 });
@@ -287,6 +287,19 @@ app.controller('global',function($scope,$http){
 	  
 	  
 });
+app.controller('news',function($scope,$http,$rootScope){
+	 
+	 $scope.update=function(){
+	  $http.get('http://cricapi.com/api/cricketScore?unique_id=913643')
+	  .success(function(response){
+		   
+		  $rootScope.arr1=response.score;
+	  });
+		$scope.array= [$rootScope.arr1]; 
+	 }
+	 
+	
+});
 	
 	
 	
@@ -295,7 +308,8 @@ app.controller('global',function($scope,$http){
 	
 	
 		
-	
+	    
+
 		 
 
 

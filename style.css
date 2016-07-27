@@ -170,20 +170,7 @@ ul h4 {
 	 
 	
 }
- @media screen and (max-device-width :1366px)
-{
-  #logo a
-  {
-    font-size:40px;
-  }
-}
-@media screen and (max-device-width : 320px)
-{
-  #logo a
-  {
-    font-size:10px;
-  }
-}
+
 
 
 #menu {
