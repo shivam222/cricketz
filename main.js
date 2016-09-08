@@ -39,17 +39,21 @@ app.controller('legend',function($scope,$http){
 	  
 });
 //slider on home page
- app.controller('crick2',function($scope){
+ app.controller('crick2',function($scope,$interval){
 	$scope.slides = [
             {image: 'images/ball.png', description: 'Image 00'},
 			 {image: 'images/warn.png', description: 'Image 01'},
             {image: 'images/tendulkar.png', description: 'Image 02'}
            ];
 		   
+		  
 		   $scope.currentindex=0;
-		   $scope.setindex=function(index){
-			   $scope.currentindex=index;
-		   };
+		   
+		   $interval(function(){ $scope.currentindex=$scope.currentindex+1;
+			   if($scope.currentindex==3){
+			   $scope.currentindex=0;}
+		   },3000);
+			   
 		   $scope.iscurrentslideindex=function(index){
 			    return $scope.currentindex===index;  
 		   };
@@ -287,7 +291,7 @@ app.controller('global',function($scope,$http){
 	  
 	  
 });
-app.controller('news',function($scope,$http,$rootScope){
+/*app.controller('news',function($scope,$http,$rootScope){
 	 
 	 $scope.update=function(){
 	  $http.get('http://cricapi.com/api/cricketScore?unique_id=913643')
@@ -299,7 +303,7 @@ app.controller('news',function($scope,$http,$rootScope){
 	 }
 	 
 	
-});
+});*/
 	
 	
 	

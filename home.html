@@ -11,7 +11,7 @@
 		<img   ng-repeat="slide in slides" class="slide" ng-hide="!iscurrentslideindex($index)" ng-src="{{slide.image}}"/>
 	    </div>
 
-        <nav class="nav2">
+        <!--<nav class="nav2">
         <div class="wrapper">
         <ul class="dots">
         <li class="dot" ng-repeat="slide in slides"><a href="" ng-class="{'active':iscurrentslideindex($index)}"  ng-click="setindex($index);">
@@ -19,7 +19,7 @@
 		</li>
         </ul>
         </div>
-        </nav>
+        </nav>-->
 	    </div>		
 		<hr>
 		<div id="home">
@@ -28,6 +28,7 @@
 		<div class="col-md-5 col-sm-5">
 		<div class="well well-sm" >		
 		<h4>Sign Up<h2><br>
+		
 		<form name="frm" action="signup.php" method="post">
 		<input type="text" name="signname" placeholder="Your name please.." class="form-control " ng-model="user.name1" required/>
 		<span ng-show="frm.signname.$error.required"><h6 style="color:red">Required!</h6></span><br>
