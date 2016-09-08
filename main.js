@@ -291,6 +291,7 @@ app.controller('global',function($scope,$http){
 	  
 	  
 });
+
 /*app.controller('news',function($scope,$http,$rootScope){
 	 
 	 $scope.update=function(){
