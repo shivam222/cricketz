@@ -265,10 +265,7 @@ ul h4 {
 	float: right;
 	padding: 0;
 }
-@keyframes forborder{
-      50%   {border: 10px solid yellow;}
-      50%     {border:10px solid orange;}
-}
+
 .slidercontainer {
 	height: 500px;
 	width: 1200px;
@@ -276,14 +273,8 @@ ul h4 {
 	 position:relative;
     background: #e6e6e6;
     margin-top: -10px;
-	border:10px solid yellow;
 	margin-left: -20px;
-	-webkit-animation-name:forborder;
-	-webkit-animation-duration:10s;
-	-webkit-animation-iteration-count: 100;
-	 animation-name: forborder;
-     animation-duration: 10s;
-	 animation-iteration-count: 100
+	
 	
 }
 .slide{
@@ -339,53 +330,7 @@ ul h4 {
 }
 
 
-.nav2 .wrapper {
-    margin: 0 auto;  /*centre allign*/
-    width: 100%;
-    /*padding: 1em 0 .8em;*/
-}
 
-.nav2 ul {
-    margin: 0;
-    width: 100%;
-}
-
-.nav2 .dot, .nav .dot a {
-    display: inline-block;
-    zoom: 1;
-}
-
-.dots .dot {
-    position: relative;
-    margin: 0 40px;
-    width: 12px;
-    height: 12px;
-}
-/*
-.dots .dot a {
-    position: absolute;
-    top: -20px;
-    left: 2px;
-    width: 10px;
-    height: 10px;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    background: red;
-    border: 1px solid transparent;
-    outline: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    -webkit-border-radius: 40%;
-    -moz-border-radius: 40%;
-    border-radius: 40%;
-   
-}
-*/
-.dots .dot a.active {
-    opacity:.4 ;
-}
 #plays{
 	color:black;
 }
