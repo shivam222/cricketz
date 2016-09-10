@@ -7,7 +7,7 @@
 			
 			
     	<div ng-controller="crick2" id="wholeslider">
-		<img src="images/back.png" style="position:absolute;margin-top: -40px;margin-left: -70px;"/>
+		<img src="images/back.jpg" style="position:absolute;margin-top: -40px;margin-left: -70px;"/>
 		<div class="slidercontainer" >
 		
 		<img   ng-repeat="slide in slides" class="slide" ng-hide="!iscurrentslideindex($index)" ng-src="{{slide.image}}"/>
@@ -61,7 +61,7 @@
 		<div ng-hide="msg" id="homeHide" class="row">
 		<div class="col-md-6" id="firstHalf">
 		<h2 style="color:white">You are logged in.</h2>
-	   <video width="320" height="240" controls autoplay >
+	   <video width="320" height="240" controls  >
        <source src="logo.mp4" type="video/mp4">
        </video>
 	   <br>
