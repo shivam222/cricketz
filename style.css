@@ -116,8 +116,9 @@ ul h4 {
 }
 .navbar-nav{
 	font-size:20px;
+	margin-left:20px
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width:241px) and (max-width: 768px) {
     
 .main2{
 		visibility:hidden;
@@ -126,13 +127,14 @@ ul h4 {
 		visibility:visible;
 	}
 	.navbar-nav{
-		font-size:15px;
+		font-size:13px;
+		margin-left:10px
 	}
 ul.nav{
     display:inline-flex;
 }
 }
-@media only screen and (max-width:240px) {
+@media only screen and (min-width:0px) and (max-width:241px) {
     
 .main2{
 		visibility:hidden;
@@ -140,16 +142,18 @@ ul.nav{
 	.main3{
 		visibility:visible;
 	}
-
 	.navbar-nav{
 		font-size:10px;
+		margin-left:0px
 	}
 ul.nav{
     display:inline-flex;
 }
-
-
+.nav li{
+	width:50px;
 }
+}
+
 
 /*
 #header {
@@ -310,15 +314,101 @@ ul.nav{
 }
 
 .slidercontainer {
-	height:500px ;
-	width: 600px;
+	height:350px ;
+	width: 800px;
 	overflow:hidden;
-	 position:relative;
+	position:relative;
     background: #e6e6e6;
-    margin-top:0%;
-	margin-left:27%;
+    margin-top:-6%;
+	margin-left:15%;
 	
 	
+}
+@media only screen and (min-width:610px) and (max-width: 770px) {
+    .slidercontainer {
+	height:250px ;
+	width: 500px;
+	overflow:hidden;
+	position:relative;
+    background: #e6e6e6;
+    margin-top:-6%;
+	margin-left:15%;
+	}
+
+}
+@media only screen and (min-width:540px) and (max-width: 605px) {
+    .slidercontainer {
+	height:200px ;
+	width: 450px;
+	overflow:hidden;
+	position:relative;
+    background: #e6e6e6;
+    margin-top:-4%;
+	margin-left:8%;
+	}
+
+}
+
+@media only screen and (min-width:416px) and (max-width:540px) {
+    .slidercontainer {
+	height:200px ;
+	width: 450px;
+	overflow:hidden;
+	position:relative;
+    background: #e6e6e6;
+    margin-top:-4%;
+	margin-left:4%;
+	}
+
+}
+
+@media only screen and (min-width:376px) and (max-width:416px) {
+    .slidercontainer {
+	height:200px ;
+	width: 400px;
+	overflow:hidden;
+	position:relative;
+    background: #e6e6e6;
+    margin-top:-4%;
+	margin-left:1%;
+	}
+
+}
+@media only screen and (min-width:362px) and (max-width:376px) {
+    .slidercontainer {
+	height:200px ;
+	width: 360px;
+	overflow:hidden;
+	position:relative;
+    background: #e6e6e6;
+    margin-top:-4%;
+	margin-left:1%;
+	}
+
+}
+@media only screen and (min-width:241px) and (max-width:362px) {
+    .slidercontainer {
+	height:200px ;
+	width: 360px;
+	overflow:hidden;
+	position:relative;
+    background: #e6e6e6;
+    margin-top:-4%;
+	margin-left:0%;
+	}
+
+}
+@media only screen and (min-width:0px) and (max-width:241px) {
+    .slidercontainer {
+	height:200px ;
+	width: 260px;
+	overflow:hidden;
+	position:relative;
+    background: #e6e6e6;
+    margin-top:-4%;
+	margin-left:0%;
+	}
+
 }
 
 .slide{
