@@ -107,6 +107,27 @@ ul h4 {
 #footer a {
 	color: #707070;
 }
+.main3{
+		visibility:hidden;
+	}
+.navbar-brand{
+	font-size:30px;
+}
+.navbar-nav{
+	font-size:20px;
+}
+@media only screen and (max-width: 768px) {
+    
+.main2{
+		visibility:hidden;
+	}	
+	.main3{
+		visibility:visible;
+	}
+ul.nav{
+    display:inline-flex
+}
+}
 
 /*
 #header {
@@ -267,16 +288,17 @@ ul h4 {
 }
 
 .slidercontainer {
-	height: 500px;
-	width: 1200px;
+	height:500px ;
+	width: 600px;
 	overflow:hidden;
 	 position:relative;
     background: #e6e6e6;
-    margin-top: -10px;
-	margin-left: -20px;
+    margin-top:0%;
+	margin-left:27%;
 	
 	
 }
+
 .slide{
 	position: absolute;
     top: 0;

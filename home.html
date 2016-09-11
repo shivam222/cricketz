@@ -5,9 +5,9 @@
 </head>
 
 			
-			
-    	<div ng-controller="crick2" id="wholeslider">
-		<img src="images/back.jpg" style="position:absolute;margin-top: -40px;margin-left: -70px;"/>
+    <body>			
+    	<div ng-controller="crick2">
+		<!--<img src="images/back.jpg" style="position:absolute;margin-top: -40px;margin-left: -70px;"/>-->
 		<div class="slidercontainer" >
 		
 		<img   ng-repeat="slide in slides" class="slide" ng-hide="!iscurrentslideindex($index)" ng-src="{{slide.image}}"/>
@@ -80,5 +80,5 @@
 	   </div>
 	   </div>
 	   <hr>
-		
+	</body>
 </html>
