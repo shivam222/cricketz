@@ -110,6 +110,7 @@ ul h4 {
 .main3{
 		visibility:hidden;
 	}
+	
 .navbar-brand{
 	font-size:30px;
 }
@@ -124,9 +125,30 @@ ul h4 {
 	.main3{
 		visibility:visible;
 	}
+	.navbar-nav{
+		font-size:15px;
+	}
 ul.nav{
-    display:inline-flex
+    display:inline-flex;
 }
+}
+@media only screen and (max-width:240px) {
+    
+.main2{
+		visibility:hidden;
+	}	
+	.main3{
+		visibility:visible;
+	}
+
+	.navbar-nav{
+		font-size:10px;
+	}
+ul.nav{
+    display:inline-flex;
+}
+
+
 }
 
 /*
