@@ -25,24 +25,18 @@
 	<body ng-app="crick" >
 	<nav  class="navbar navbar-inverse navbar-fixed-top main2">
 			
-			  <div class="container-fluid" >
-				<div  class="navbar-header " >
+			  <div class="row" >
+				<div  class="navbar-header col-md-6 col-sm-6" >
 				<a class="navbar-brand" href="#cricketz" >CRICKETZ!</a>
 				</div>
-				
-					<ul class="nav navbar-nav" style="float:right;">
-						<li><a href="#legends" class="activate">Legends</a></li>
-						<li><a href="#news">News</a></li>
-						<li><a href="#rank">Rank</a></li>
-						<li><a href="#learn">Learn</a></li>
-						<li class="last"><a href="#global">Global</a></li>
-					</ul>
-			  </div>
-	</nav>
-	<nav  class="navbar navbar-inverse navbar-fixed-top main3">
-			
-			  
-				
+				   <div class="col-md-6 col-sm-6">
+		<!--		    
+<div class="responsive-menus responsive-menus-0-0" data-mediasize="768">
+<span class="toggler">
+<div id="main-menu" class="rm-no-class responsive-menus-simple">-->
+
+					
+					   <div class="container-fluid menu3" >
 					<ul class="nav navbar-nav" >
 						<li><a href="#legends" class="activate">Legends</a></li>
 						<li><a href="#news">News</a></li>
@@ -50,8 +44,25 @@
 						<li><a href="#learn">Learn</a></li>
 						<li class="last"><a href="#global">Global</a></li>
 					</ul>
+					<div id="small">
+					<select class="form-control" onchange="location = this.value;"> 
+                      <option value="" selected="selected">Home</option> 
+    
+                      <option value="#legends">Legends</option> 
+                      <option value="#news">News</option> 
+                      <option value="#rank">Rank</option> 
+                      <option value="#learn">Learn</option> 
+                      <option value="#global">Global</option> 
+                      </select>
+					  </div>
+					</div>
+					<!--</div>
+					</div>-->
+				 
+				</div>
 			  </div>
 	</nav>
+	
 	
 	     
 	     <div id="wrapper" class="container">
