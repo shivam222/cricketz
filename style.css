@@ -118,6 +118,27 @@ ul h4 {
 	font-size:20px;
 	margin-left:20px
 }
+.nav{
+	float:right;
+}
+#small{
+	float:right;
+	display: none;
+}
+@media (max-width: 768px) {
+  nav ul     { display: none; }
+  #small { display: inline-block; }
+}
+#small{
+	margin-top:-40px;
+}
+
+/*
+@media only screen and (max-width: 768px) {
+    
+.nav{float:left;}
+}
+
 @media only screen and (min-width:241px) and (max-width: 768px) {
     
 .main2{
@@ -152,7 +173,7 @@ ul.nav{
 .nav li{
 	width:50px;
 }
-}
+}*/
 
 
 /*
@@ -324,6 +345,7 @@ ul.nav{
 	
 	
 }
+/*
 @media only screen and (min-width:610px) and (max-width: 770px) {
     .slidercontainer {
 	height:250px ;
@@ -409,7 +431,7 @@ ul.nav{
 	margin-left:0%;
 	}
 
-}
+}*/
 
 .slide{
 	position: absolute;
