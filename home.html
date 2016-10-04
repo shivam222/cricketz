@@ -5,11 +5,20 @@
 </head>
 
 			
-    <body>			
-    	
-		<div ng-controller="crick2" class="slidercontainer " >
+    <body >	
+     <div  ng-controller="crick2">	
+    	<div class="row slider1">
+		<div class="slidercontainer col-md-8 col-md-offset-2 col-xs-4 col-xs-offset-1">
 		<img   ng-repeat="slide in slides" class="slide  img-responsive" ng-hide="!iscurrentslideindex($index)" ng-src="{{slide.image}}"/>
 	    </div>
+		</div>
+		
+		<div class="row slider2">
+		<div class="slidercontainer col-md-8 col-md-offset-2 col-xs-4 col-xs-offset-1">
+		<img   ng-repeat="slide in slides" class="slide  img-responsive" ng-hide="!iscurrentslideindex($index)" ng-src="{{slide.image}}"/>
+	    </div>
+		</div>
+	</div>
 	
 	   		
 		<hr>

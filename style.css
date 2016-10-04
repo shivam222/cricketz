@@ -336,14 +336,30 @@ ul.nav{
 
 .slidercontainer {
 	height:350px ;
-	width: 800px;
+	/*width: 800px;*/
 	overflow:hidden;
 	position:relative;
     background: #e6e6e6;
     margin-top:-6%;
-	margin-left:15%;
-	
-	
+	/*margin-left:15%;*/
+}
+.slider2{
+	visibility:hidden;
+	}
+@media only screen and (max-width: 768px) {
+    .slidercontainer {
+	height:250px ;
+	margin-top:-6%;
+	}
+
+}
+@media only screen and (max-width: 530px) {
+    .slider1{
+		visibility:hidden;
+		}
+		.slider2{
+		visibility:visible;
+		}
 }
 /*
 @media only screen and (min-width:610px) and (max-width: 770px) {
