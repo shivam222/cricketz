@@ -12,9 +12,7 @@ $database=mysql_select_db($db_name,$connection);
 	    $name=$_POST['name'];
 	    $pass=$_POST['pass'];
 		$hashed=md5($pass);
-		$query="SELECT password FROM users WHERE mail='$name'";
-		$run=mysql_query($query);
-		$ansi=mysql_fetch_assoc($run);
+		$ansi=mysql_fetch_assoc(mysql_query("SELECT password FROM users WHERE mail='$name'"));
 		if($hashed==$ansi['password']){
 		echo true;
 		}
