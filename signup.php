@@ -8,24 +8,23 @@ $connection=mysql_connect($servername,$username,$password);
 $database=mysql_select_db($db_name,$connection);
 	
 	
-	    $name=$_POST['signname'];
+	    	$name=$_POST['signname'];
 		$mail=$_POST['signmail'];
-	    $pass=$_POST['signpass'];
+	    	$pass=$_POST['signpass'];
 		$hashed=md5($pass);
 		$query1="SELECT name FROM users WHERE mail='$mail'";
 		$run1=mysql_query($query1);
 		if(mysql_num_rows($run1)==0){
 		$query="INSERT INTO users (id,name,mail,password) VALUES (null,'$name','$mail','$hashed')";
-		$run=mysql_query($query);
-		if($run)
+		if(mysql_query($query))
 		{
-	    echo 'successful...go back and login.';
+	   		 echo 'successful...go back and login.';
 		}
 		else{
-			echo 'try again.';
+			 echo 'try again.';
 		}
 		}
 		else{
-			echo 'this mail id is already registered.';
+			 echo 'this mail id is already registered.';
 		}
 ?>
