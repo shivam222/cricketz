@@ -134,23 +134,6 @@ app.controller('ranker',function($scope,$http){
 		   $scope.array3=response.records;
 	  }); 
 	  }	; 
-	 /* $scope.myfunc=function(){
-		  if(check==0)
-		  {
-			  return 'name';
-		  }
-		  if(check==1)
-		  {
-			  return 'runs';
-		  }
-		  if(check==2)
-		  {
-			  return 'wickets';
-		  }
-		  else{
-			  return 'matches';
-		  }
-	  };*/
 	  
 });
 app.controller('home',function($scope,$http,$rootScope,$cookies){
@@ -291,20 +274,6 @@ app.controller('global',function($scope,$http){
 	  
 	  
 });
-
-/*app.controller('news',function($scope,$http,$rootScope){
-	 
-	 $scope.update=function(){
-	  $http.get('http://cricapi.com/api/cricketScore?unique_id=913643')
-	  .success(function(response){
-		   
-		  $rootScope.arr1=response.score;
-	  });
-		$scope.array= [$rootScope.arr1]; 
-	 }
-	 
-	
-});*/
 	
 	
 	
